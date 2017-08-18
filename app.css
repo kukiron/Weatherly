@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 300;
+  src: url('assets/fonts/segoeuil.ttf'), format('ttf');
+}
+
+#message.spinner {
+  content: url('assets/images/loading-weather.gif');
+  padding: 90px 0 0 210px;
+}
+
+body {
+  width: 680px;
+  height: 500px;
+}
+
+body, h1, h2, h3, p {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 300;
+}
+
+#forecast {
+  height: 100vh;
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.loader-img {
+  margin: 100px auto 30px auto;
+}
+
+.loader {
+  text-align: center;
+}
+
+#center {
+  padding-top: 50px;
+  text-align: center;
+  background-color: rgba(248, 247, 216, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#address {
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #333;
+  width: 60%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(30, 30, 30, 0.5);
+}
+
+#title {
+  margin-top: 40px;
+}
+
+.curently {
+  text-align: center;
+}
+
+.skycon, .main {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.skycon {
+  margin-right: 20px;
+}
+
+#temp {
+  margin-right: 10px;
+  font-size: 50px;
+}
+
+#current-summary {
+  font-size: 30px;
+}
+
+.secondary {
+  display: flex;
+  justify-content: center;
+}
+#others_1, #hourly-summary, #others_2 {
+  align-self: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 40px 0 0 0;
+  width: 30%;
+  height: 90px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(20, 20, 20, 0.5);
+  font-size: 16px;
+}
+#others_1 {
+  margin-right: 5px;
+  padding-top: 10px;
+  line-height: 23px;
+}
+#hourly-summary {
+  display: flex;
+  font-size: 16px;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  padding: 0 10px 0 10px;
+}
+#others_2 {
+  margin-left: 5px;
+  padding-top: 10px;
+  line-height: 23px;
+}
+#others_2 span i {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+#time_date_month {
+  float: left;
+  /*display: inline-block;*/
+  position: relative;
+  width: 25%;
+}
+#clock {
+  margin-top: 8vh;
+}
+span#time {
+  font-size: 55px;
+  color: #FFF;
+}
+span#period {
+  font-size: 16px;
+  color: #FFF;
+}
+span#day {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.choose-unit {
+  font-size: 14px;
+  clear: both;
+  margin-bottom: 5px !important;
+}
+span.celsius:hover {
+  cursor: pointer;
+}
+span.fahrenheit:hover {
+  cursor: pointer;
+}
+span.active {
+  font-weight: bold;
+}
