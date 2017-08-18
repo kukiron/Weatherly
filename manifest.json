@@ -20,6 +20,7 @@
     "48": "assets/images/icons/icon-48.png",
     "128": "assets/images/icons/icon-128.png"
   },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ZYg84eV+ITJdELxj/kLscd+VDubJy5/EelvN6rqTDTUo6Y49r9qK77BEHA/M58mKeLWhAdlR02DMM4X9s8WsgzVaUp937U7gTeJsyTABDV3pIKr8U3y2EJsv+6zktdGWYrS6dtZ+NFskZA6QQaY3CK+qsJBAOgHFnnH0iS/25bLbTwR/IEmSdG3hFex1wI0ik3YApsv01ZQKtP0EjIjke3xIA3f8dktwYCOWwIcZqsfzLeDY/ehJZlcOSPpSvB4fv8vlI0U98aKG77RZQS7C6oNcifMmWQmLtlSx+2RvzHnRjyjyGZS56nEiSq25vKK+iNvX97pDWmXIjHS/aa92wIDAQAB",
 
   "content_security_policy": "script-src 'self' https://maps.googleapis.com/ https://maps.gstatic.com https://*.googleapis.com/ 'unsafe-eval'; frame-src *; default-src 'self'; img-src * data:; connect-src *; style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline'; font-src *",
   "permissions": [
