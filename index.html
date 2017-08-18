@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weatherly</title>
+    <link rel="icon" href="assets/images/icons/favicon.ico">
+    <link rel="stylesheet" href="app.css">
+    <script src="js/libs/skycons.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+  <div id="message">
+    <div id="forecast">
+      <div id="center">
+
+        <div id="address"></div>
+
+        <div id="title">
+          <div class="currently">
+            <div class="skycon">
+              <canvas width="85" height="85"></canvas>
+            </div>
+            <div class="main">
+              <span id="temp"></span>
+              <span id="current-summary"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="secondary">
+          <div id="others_1"></div>
+          <div id="hourly-summary"></div>
+          <div id="others_2">
+          </div>
+        </div>
+
+        <div>
+          <div id="time_date_month">
+            <div id="clock">
+              <span id="time"></span>
+              <span id="period"></span>
+            </div>
+            <div id="date_month">
+              <span id="day"></span>
+            </div>
+          </div>
+
+          <div class="choose-unit">
+            <span class="celsius">&degC</span><span> / </span><span class="fahrenheit"> &degF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/libs/jquery.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

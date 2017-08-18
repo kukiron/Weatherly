@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "author": "Kafil Uddin Kiron",
+
+  "name": "Weatherly",
+  "description": "Showing weather detail at your current location",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon-128.png",
+    "default_title": "Weatherly",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "assets/images/icons/icon-16.png",
+    "48": "assets/images/icons/icon-48.png",
+    "128": "assets/images/icons/icon-128.png"
+  },
+
+  "content_security_policy": "script-src 'self' https://maps.googleapis.com/ https://maps.gstatic.com https://*.googleapis.com/ 'unsafe-eval'; frame-src *; default-src 'self'; img-src * data:; connect-src *; style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline'; font-src *",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "<all_urls>",
+    "geolocation"
+  ]
+}
