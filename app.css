@@ -3,9 +3,12 @@
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* Importing Segoe UI font */
 @font-face {
   font-family: 'Segoe UI';
   font-style: normal;
@@ -13,21 +16,28 @@
   src: url('assets/fonts/segoeuil.ttf'), format('ttf');
 }
 
-#message.spinner {
-  content: url('assets/images/loading-weather.gif');
-  padding: 90px 0 0 210px;
-}
-
+/* Setting up dimension & font */
 body {
   width: 680px;
   height: 500px;
 }
-
 body, h1, h2, h3, p {
   font-family: "Segoe UI", sans-serif;
   font-weight: 300;
 }
 
+/* Loader spinner */
+.wrapper.spinner {
+  content: url('assets/images/loading-weather.gif');
+  padding: 90px 0 0 210px;
+}
+
+/* Error message */
+.wrapper.error {
+  content: url('assets/images/no-internet.jpg');
+}
+
+/* Container div */
 #forecast {
   height: 100vh;
   width: auto;
@@ -38,15 +48,6 @@ body, h1, h2, h3, p {
   -o-background-size: cover;
   background-size: cover;
 }
-
-.loader-img {
-  margin: 100px auto 30px auto;
-}
-
-.loader {
-  text-align: center;
-}
-
 #center {
   padding-top: 50px;
   text-align: center;
@@ -57,50 +58,45 @@ body, h1, h2, h3, p {
   height: 100%;
 }
 
+/* Address of current location */
 #address {
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 12px;
   font-size: 18px;
   color: #333;
-  width: 60%;
+  width: 50%;
   height: 50px;
   background-color: rgba(255, 255, 255, .6);
   border-radius: 5px;
   box-shadow: 3px 3px 2px rgba(30, 30, 30, 0.5);
 }
 
+/* Current weather condition */
 #title {
   margin-top: 40px;
 }
-
-.curently {
-  text-align: center;
+.skycon {
+  margin-right: 20px;
 }
-
 .skycon, .main {
   display: inline-block;
   vertical-align: middle;
 }
-
-.skycon {
-  margin-right: 20px;
-}
-
 #temp {
   margin-right: 10px;
   font-size: 50px;
 }
-
 #current-summary {
   font-size: 30px;
 }
 
+/* Weater Details in 3 divs */
 .secondary {
   display: flex;
   justify-content: center;
 }
-#others_1, #hourly-summary, #others_2 {
-  align-self: center;
+#info_1, #hourly-summary, #info_2 {
+  align-content: center;
   display: inline-block;
   vertical-align: middle;
   margin: 40px 0 0 0;
@@ -111,62 +107,61 @@ body, h1, h2, h3, p {
   box-shadow: 3px 3px 2px rgba(20, 20, 20, 0.5);
   font-size: 16px;
 }
-#others_1 {
-  margin-right: 5px;
+#info_1, #info_2 {
   padding-top: 10px;
   line-height: 23px;
+}
+#info_1 {
+  margin-right: 10px;
+}
+#info_2 {
+  margin-left: 10px;
 }
 #hourly-summary {
   display: flex;
   font-size: 16px;
   justify-content:center;
-  align-content:center;
   flex-direction:column;
   padding: 0 10px 0 10px;
 }
-#others_2 {
-  margin-left: 5px;
-  padding-top: 10px;
-  line-height: 23px;
-}
-#others_2 span i {
+#info_2 span i {
   border: solid black;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 5px;
 }
 
+/* Showing time & date */
 #time_date_month {
   float: left;
-  /*display: inline-block;*/
+  text-align: left;
   position: relative;
   width: 25%;
+  padding-left: 15px;
 }
 #clock {
   margin-top: 8vh;
 }
-span#time {
+#time {
   font-size: 55px;
   color: #FFF;
 }
-span#period {
+#period {
   font-size: 16px;
   color: #FFF;
 }
-span#day {
+#day {
   font-size: 18px;
   color: #FFF;
 }
 
+/* Convert Temperature unit */
 .choose-unit {
-  font-size: 14px;
+  font-size: 16px;
   clear: both;
   margin-bottom: 5px !important;
 }
-span.celsius:hover {
-  cursor: pointer;
-}
-span.fahrenheit:hover {
+.celsius:hover, .fahrenheit:hover {
   cursor: pointer;
 }
 span.active {
