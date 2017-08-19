@@ -3,8 +3,8 @@
   "author": "Kafil Uddin Kiron",
 
   "name": "Weatherly",
-  "description": "Showing weather detail at your current location",
-  "version": "1.0.0",
+  "description": "Best way to see the weather details, right in your browser. Easier than looking outside!",
+  "version": "0.1.0",
 
   "browser_action": {
     "default_icon": "icon-128.png",
@@ -12,7 +12,10 @@
     "default_popup": "index.html"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "js/lib/jquery.min.js",
+      "js/background.js"
+    ],
     "persistent": false
   },
   "icons": {
