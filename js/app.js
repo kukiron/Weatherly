@@ -62,6 +62,10 @@
                       + 'UV Index: ' + uvIndex);
         $('.arrow').css('transform', 'rotate(' + windBearing + 'deg)');
 
+        // Set badge text & color for current temperature
+        chrome.browserAction.setBadgeText({text: tempC});
+        chrome.browserAction.setBadgeBackgroundColor({color: "#4CAF50"});
+
         // Convert units upon clicking
         $("span.celsius").addClass("active");
         $("span.fahrenheit").on("click", function() {
@@ -69,12 +73,14 @@
           $("span.celsius").removeClass("active");
           $('#temp').html('<strong>' + tempF + '\xB0F.' + '</strong>');
           $('span.dew-temp').html('Dew Point: ' + dewTempF + '\xB0F');
+          chrome.browserAction.setBadgeText({text: tempF});
         });
         $("span.celsius").on("click", function() {
           $("span.fahrenheit").removeClass("active");
           $("span.celsius").addClass("active");
           $('#temp').html('<strong>' + tempC + '\xB0C' + '.</strong>');
           $('span.dew-temp').html('Dew Point: ' + dewTempC + '\xB0C');
+          chrome.browserAction.setBadgeText({text: tempC});
         });
 
         // Activate Skycons
@@ -89,10 +95,6 @@
         // Setting the Background Image
         var backgroundImage = Weatherly.choose_image(icon);
         $('#forecast').css('background-image', 'url(' + backgroundImage + ')');
-
-        // Set badge text & color for current temperature
-        chrome.browserAction.setBadgeText({text: tempC});
-        chrome.browserAction.setBadgeBackgroundColor({color: "#4CAF50"});
       });
     },
     function error() {
