@@ -6,6 +6,7 @@
   'use strict';
 
   var Weatherly = {
+    // Set icon for weather condition
     skycon_type: function(icon) {
       if(icon === 'rain') return Skycons.RAIN;
       else if(icon === 'snow') return Skycons.SNOW;
@@ -21,7 +22,7 @@
 
       return Skycons.CLOUDY;
     },
-
+    // Set background image
     choose_image: function(icon) {
       if (icon === 'rain') return 'assets/images/background-images/rain.jpg';
       else if (icon === 'snow') return 'assets/images/background-images/snow.jpg';
@@ -35,7 +36,7 @@
       else if (icon === 'clear-day') return 'assets/images/background-images/clear-day.jpg';
       else if (icon === 'clear-night') return 'assets/images/background-images/clear-night.jpg';
     },
-
+    // Set clock showing current time
     update_clock: function() {
       var currentTime = new Date ( ),
           currentHours = currentTime.getHours ( ),
@@ -59,7 +60,7 @@
       document.getElementById("time").innerHTML = currentTimeString;
       document.getElementById("period").innerHTML = timeOfDay;
     },
-
+    // Set date, month & day
     update_date: (function() {
       var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
           dates = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

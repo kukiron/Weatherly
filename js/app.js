@@ -36,21 +36,21 @@
           dewTemp = data.currently.dewPoint,
           dewTempF = dewTemp.toFixed(1),
           dewTempC = Weatherly.fToC(dewTemp),
-          humidity = data.currently.humidity,
-          cloudCover = Math.round(data.currently.cloudCover*100),
+          humidity = data.currently.humidity * 100,
+          cloudCover = Math.round(data.currently.cloudCover * 100),
           windSpeed = (data.currently.windSpeed).toFixed(1),
           windBearing = data.currently.windBearing + 45,
           pressure = (data.currently.pressure).toFixed(1),
           uvIndex = data.currently.uvIndex;
 
-      // Populate divs with weater details
+      // Populate divs with weather details
       $('#temp').html('<strong>' + tempC + '\xB0C' + '.</strong>');
       $('#current-summary').html(current_summary);
       $('.skycon canvas').addClass(icon);
 
       $('#hourly-summary').html(hourly_summary);
       $('#info_1').html(
-                      'Humidity: ' + humidity * 100 + '%' + '<br>'
+                      'Humidity: ' + humidity + '%' + '<br>'
                     +'<span class="dew-temp">Dew Point: ' + dewTempC + '\xB0C' + '</span>' + '<br>'
                     + 'Cloud Cover: ' + cloudCover + '%');
       $('#info_2').html(
@@ -63,11 +63,11 @@
       chrome.browserAction.setBadgeText({text: tempC});
       chrome.browserAction.setBadgeBackgroundColor({color: "#4CAF50"});
 
-      // Convert units upon clicking
       $("span.celsius").addClass("active");
+      // Convert units upon clicking
       $("span.fahrenheit").on("click", function() {
-        $("span.fahrenheit").addClass("active");
         $("span.celsius").removeClass("active");
+        $("span.fahrenheit").addClass("active");
         $('#temp').html('<strong>' + tempF + '\xB0F.' + '</strong>');
         $('span.dew-temp').html('Dew Point: ' + dewTempF + '\xB0F');
         chrome.browserAction.setBadgeText({text: tempF});
@@ -95,6 +95,7 @@
     });
   },
   function error() {
+    // Show error message if failed to load data
     $('.wrapper').removeClass('spinner');
     $('.wrapper').addClass('error');
   });
