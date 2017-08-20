@@ -38,9 +38,9 @@
     },
     // Set clock showing current time
     update_clock: function() {
-      var currentTime = new Date ( ),
-          currentHours = currentTime.getHours ( ),
-          currentMinutes = currentTime.getMinutes ( );
+      var currentTime = new Date(),
+          currentHours = currentTime.getHours(),
+          currentMinutes = currentTime.getMinutes();
 
       currentHours = (currentHours < 10 ? '0' : '') + currentHours;
       currentMinutes = (currentMinutes < 10 ? '0' : '') + currentMinutes;
@@ -57,8 +57,8 @@
 
       var currentTimeString = currentHours + ":" + currentMinutes;
 
-      document.getElementById("time").innerHTML = currentTimeString;
-      document.getElementById("period").innerHTML = timeOfDay;
+      $('#time').html(currentTimeString);
+      $('#period').html(timeOfDay);
     },
     // Set date, month & day
     update_date: (function() {
@@ -69,14 +69,12 @@
           current_month = new Date().getMonth(),
           current_day  = new Date().getDay();
 
-      var day = document.getElementById('day');
-      day.innerHTML = (dates[current_day] + ", " + months[current_month] + " " + current_date);
+      $('#day').html(dates[current_day] + ", " + months[current_month] + " " + current_date);
     })(),
     // Convert temperature unit
     fToC: function(fahrenheit) {
-      var fToCel = (fahrenheit - 32) * 5 / 9;
-      var T = fToCel.toFixed(1);
-      return T;
+      var celcius = (fahrenheit - 32) * 5 / 9;
+      return celcius.toFixed(1);
     }
   };
 
