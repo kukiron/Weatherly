@@ -4,7 +4,7 @@
 
   "name": "Weatherly",
   "description": "Best way to see the weather details, right in your browser. Easier than looking outside!",
-  "version": "0.1.0",
+  "version": "1.0.0",
 
   "browser_action": {
     "default_icon": "icon-128.png",
@@ -23,7 +23,8 @@
     "48": "assets/images/icons/icon-48.png",
     "128": "assets/images/icons/icon-128.png"
   },
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ZYg84eV+ITJdELxj/kLscd+VDubJy5/EelvN6rqTDTUo6Y49r9qK77BEHA/M58mKeLWhAdlR02DMM4X9s8WsgzVaUp937U7gTeJsyTABDV3pIKr8U3y2EJsv+6zktdGWYrS6dtZ+NFskZA6QQaY3CK+qsJBAOgHFnnH0iS/25bLbTwR/IEmSdG3hFex1wI0ik3YApsv01ZQKtP0EjIjke3xIA3f8dktwYCOWwIcZqsfzLeDY/ehJZlcOSPpSvB4fv8vlI0U98aKG77RZQS7C6oNcifMmWQmLtlSx+2RvzHnRjyjyGZS56nEiSq25vKK+iNvX97pDWmXIjHS/aa92wIDAQAB",
+  
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+fEZUFbxo9ezst0oGj0H5c/xh5dYF1H/EKqbLOWZMDHiW5gGWY1rhu2mw6sEJiKp0ZZtCDI+IH5mZ8suGg4sy1TxHEohk1WqJPIJZtAq2A+thHHQ8LNJ9mhWiPLHfS35wul+oE7rgghkUM/WEWYkfAmEz9Wp9E738d2ylSr3SK/kjFsIcGcU/3lJYv9cJpgxf/2Pyma9rF3ZFHLrkkYuW9Yt299rORBmpVoqTlgvt6KqOZRffBXcn/KaaOU/idVDQEI5UTQdVNnHTuBSwIXg/wLr+DKbuR/sE8wnpiiHzPjT4B1AnChzX8SuNm+oTE9c+HdTdeoTYOpqivOIwj0UwIDAQAB",
 
   "content_security_policy": "script-src 'self' https://maps.googleapis.com/ https://maps.gstatic.com https://*.googleapis.com/ 'unsafe-eval'; frame-src *; default-src 'self'; img-src * data:; connect-src *; style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline'; font-src *",
   "permissions": [
