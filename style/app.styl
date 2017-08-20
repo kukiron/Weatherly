@@ -1,0 +1,175 @@
+/*
+* Styling Weatherly with Stylus
+*
+* Compiled & compressed to CSS
+*/
+
+/* Mixins */
+vendorize(property, value)
+  -webkit-{property} value
+  -moz-{property} value
+  -ms-{property} value
+  {property} value
+
+/* Variables */
+font-family = 'Segoe UI'
+font-size = 16px
+font-url = '../assets/fonts/segoeuil.ttf'
+spinner-url = '../assets/images/loading-weather.gif'
+error-url = '../assets/images/no-internet.jpg'
+wrapper-bg-color = rgba(255, 255, 255, .3)
+div-bg-color = rgba(255, 255, 255, .6)
+box-shadow = 3px 3px 2px rgba(30, 30, 30, 0.5)
+
+/* Global styles */
+*
+  margin 0
+  padding 0
+  border 0
+  vendorize(box-sizing, border-box)
+
+/* Importing fonts */
+@font-face
+  font-family font-family
+  font-style normal
+  font-weight 300
+  src url(font-url), format('ttf')
+
+/* Setting dimensions & font */
+body
+  width 680px
+  height 510px
+
+body, h1, h2, h3, p
+  font-family font-family
+  font-weight 300
+
+/* Loader & error images */
+.wrapper
+  &.spinner
+    content url(spinner-url)
+    padding 100px 0 0 210px
+  &.error
+    content url(error-url)
+
+/* Wrapper divs */
+#forecast
+  height 100vh
+  width auto
+  background-repeat no-repeat
+  background-position center center
+  vendorize(background-size, cover)
+
+#center
+  position absolute
+  top: 0px;
+  bottom: 0px;
+  padding-top 45px
+  text-align center
+  background-color wrapper-bg-color
+  width 100%
+
+/* Address div */
+#address
+  margin 0 auto
+  padding-top 12px
+  font-size 18px
+  color #333
+  width 50%
+  height 50px
+  background-color div-bg-color
+  border-radius 5px
+  box-shadow box-shadow
+
+/* Temperature, icon & current summary  */
+#title
+  margin-top 40px
+
+.skycon
+  margin-right 20px
+
+.skycon, .main
+  display inline-block
+  vertical-align middle
+
+#temp
+  margin-right 10px
+  font-size 50px
+
+#current-summary
+  font-size 30px
+
+.secondary
+  display flex
+  justify-content center
+
+/* Weather details & hourly summary */
+#info_1, #hourly-summary, #info_2
+  align-content center
+  display inline-block
+  vertical-align middle
+  margin 40px 0 0 0
+  width 30%
+  height 90px
+  background-color div-bg-color
+  border-radius 5px
+  box-shadow box-shadow
+  font-size font-size
+
+#info_1, #info_2
+  padding-top 10px
+  line-height 23px
+
+#info_1
+  margin-right 10px
+
+#info_2
+  margin-left 10px
+  span
+    i
+      border solid black
+      border-width 0 2px 2px 0
+      display inline-block
+      padding 5px
+
+#hourly-summary
+  display flex
+  font-size 18px
+  justify-content center
+  flex-direction column
+  padding 0 10px 0 10px
+
+/* Showing time & date */
+#time_date_month
+  float left
+  text-align left
+  position relative
+  width 25%
+  padding-left 15px
+
+#clock
+  margin-top 6.5vh
+
+#time
+  font-size 55px
+  color #FFF
+
+#period
+  font-size font-size
+  color #FFF
+
+#day
+  font-size 18px
+  color #FFF
+
+/* Converting unit */
+.choose-unit
+  font-size font-size
+  clear both
+
+.celsius:hover, .fahrenheit:hover
+  cursor pointer
+
+span
+  &.active
+    font-weight bold
