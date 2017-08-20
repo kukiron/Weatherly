@@ -29,7 +29,7 @@ body, h1, h2, h3, p {
 /* Loader spinner */
 .wrapper.spinner {
   content: url('assets/images/loading-weather.gif');
-  padding: 90px 0 0 210px;
+  padding: 100px 0 0 210px;
 }
 
 /* Error message */

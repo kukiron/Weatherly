@@ -2,7 +2,6 @@
  * Listens for the app launching, then creates the window.
  *
  */
-
 /*
 chrome.browserAction.onClicked.addListener(function() {
   var url = 'index.html';
