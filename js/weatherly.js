@@ -1,9 +1,7 @@
 /**
- * Set background image & weather icon
+ * Helper functions for Weatherly Extension
  *
- * Update time & date
  */
-
 (function() {
   'use strict';
 
@@ -72,7 +70,13 @@
 
       var day = document.getElementById('day');
       day.innerHTML = (dates[current_day] + ", " + months[current_month] + " " + current_date);
-    })()
+    })(),
+    // Convert temperature unit
+    fToC: function(fahrenheit) {
+      var fToCel = (fahrenheit - 32) * 5 / 9;
+      var T = fToCel.toFixed(1);
+      return T;
+    }
   };
 
   // Update current time
