@@ -26,7 +26,7 @@
 
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+fEZUFbxo9ezst0oGj0H5c/xh5dYF1H/EKqbLOWZMDHiW5gGWY1rhu2mw6sEJiKp0ZZtCDI+IH5mZ8suGg4sy1TxHEohk1WqJPIJZtAq2A+thHHQ8LNJ9mhWiPLHfS35wul+oE7rgghkUM/WEWYkfAmEz9Wp9E738d2ylSr3SK/kjFsIcGcU/3lJYv9cJpgxf/2Pyma9rF3ZFHLrkkYuW9Yt299rORBmpVoqTlgvt6KqOZRffBXcn/KaaOU/idVDQEI5UTQdVNnHTuBSwIXg/wLr+DKbuR/sE8wnpiiHzPjT4B1AnChzX8SuNm+oTE9c+HdTdeoTYOpqivOIwj0UwIDAQAB",
 
-  "content_security_policy": "script-src 'self' https://maps.googleapis.com/ https://maps.gstatic.com https://*.googleapis.com/ 'unsafe-eval'; frame-src *; default-src 'self'; img-src * data:; connect-src *; style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline'; font-src *",
+  "content_security_policy": "script-src 'self'; object-src 'self'",
   "permissions": [
     "tabs",
     "activeTab",
