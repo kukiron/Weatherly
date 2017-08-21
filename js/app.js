@@ -1,5 +1,5 @@
 /**
- * Main function: Uses DarkSky API for weather details
+ * Main function - Uses DarkSky API for weather details
  *
  */
 (function() {
