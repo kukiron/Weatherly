@@ -51,7 +51,7 @@
       $('#hourly-summary').html(hourly_summary);
       $('#info_1').html(
                       'Humidity: ' + humidity + '%' + '<br>'
-                    +'<span class="dew-temp">Dew Point: ' + dewTempC + '\xB0C' + '</span>' + '<br>'
+                    + 'Dew Point: ' + dewTempC + '\xB0C' + '<br>'
                     + 'Cloud Cover: ' + cloudCover + '%');
       $('#info_2').html(
                       'Wind: ' + windSpeed + ' mph ' + '&nbsp;&nbsp' + '<span><i class="arrow"></i></span>' + '<br>'
