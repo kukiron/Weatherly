@@ -4,7 +4,7 @@
 
   "name": "Weatherly",
   "description": "Best way to see the weather details, right in your browser. Easier than looking outside!",
-  "version": "1.0.0",
+  "version": "1.1.0",
 
   "browser_action": {
     "default_icon": "icon-128.png",

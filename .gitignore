@@ -4,7 +4,7 @@
 # testing
 /test
 
-# extension
+# extension key
 Weatherly.pem
 
 # IntelliJ
@@ -15,5 +15,3 @@ Weatherly.pem
 Public Key.txt
 .DS_Store
 .env
-package-lock.json
-npm-debug.log*
