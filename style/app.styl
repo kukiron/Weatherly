@@ -12,6 +12,8 @@ vendorize(property, value)
   {property} value
 
 /* Variables */
+width = 650px
+height = 510px
 font-family = 'Segoe UI'
 font-size = 16px
 font-url = '../assets/fonts/segoeuil.ttf'
@@ -36,9 +38,9 @@ box-shadow = 3px 3px 2px rgba(30, 30, 30, 0.5)
   src url(font-url), format('ttf')
 
 /* Setting dimensions & font */
-body
-  width 680px
-  height 510px
+body, .box
+  width width
+  height height
 
 body, h1, h2, h3, p
   font-family font-family
@@ -46,24 +48,24 @@ body, h1, h2, h3, p
 
 /* Loader & error images */
 .wrapper
+  white-space nowrap
+  overflow hidden
   &.spinner
     content url(spinner-url)
-    padding 100px 0 0 210px
+    padding 100px 0 0 195px
   &.error
     content url(error-url)
 
 /* Wrapper divs */
 #forecast
-  height 100vh
-  width auto
   background-repeat no-repeat
   background-position center center
   vendorize(background-size, cover)
 
 #center
   position absolute
-  top: 0px;
-  bottom: 0px;
+  top 0px
+  bottom 0px
   padding-top 45px
   text-align center
   background-color wrapper-bg-color
@@ -133,11 +135,12 @@ body, h1, h2, h3, p
       padding 5px
 
 #hourly-summary
+  padding 0 10px 0 10px
   display flex
   font-size font-size
   justify-content center
   flex-direction column
-  padding 0 10px 0 10px
+  white-space normal !important
 
 /* Showing time & date */
 #time_date_month
@@ -173,3 +176,42 @@ body, h1, h2, h3, p
 span
   &.active
     font-weight bold
+
+/* Dark Sky weather map */
+.map
+  margin-left -3px
+  display none
+  position relative
+
+.box
+  display inline-block
+  vertical-align top
+
+iframe
+  height height
+  width width
+  margin 0
+  padding 0
+
+.backBtn, .nextBtn
+  position absolute
+  top 0
+  left 0
+  cursor default
+
+.backBtn
+  z-index 10
+  &:hover
+    background #e1e1e1
+  &:active
+    background #ccc
+
+.backBtn:focus, .nextBtn:focus
+  box-shadow none
+  outline none
+
+.nextBtn
+  &:hover
+    background #96C4D9
+  &:active
+    background #649DBC

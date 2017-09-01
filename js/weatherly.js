@@ -6,7 +6,8 @@
   'use strict';
 
   var Weatherly = {
-    // Set icon for weather condition
+
+    /** Set icon for weather condition **/
     skycon_type: function(icon) {
       if(icon === 'rain') return Skycons.RAIN;
       else if(icon === 'snow') return Skycons.SNOW;
@@ -22,7 +23,8 @@
 
       return Skycons.CLOUDY;
     },
-    // Set background image
+
+    /** Set background image **/
     choose_image: function(icon) {
       if (icon === 'rain') return 'assets/images/background-images/rain.jpg';
       else if (icon === 'snow') return 'assets/images/background-images/snow.jpg';
@@ -36,42 +38,63 @@
       else if (icon === 'clear-day') return 'assets/images/background-images/clear-day.jpg';
       else if (icon === 'clear-night') return 'assets/images/background-images/clear-night.jpg';
     },
-    // Set clock showing current time
+
+    /** Set clock showing current time **/
     update_clock: function() {
+      var timeOfDay, currentTimeString;
       var currentTime = new Date(),
           currentHours = currentTime.getHours(),
           currentMinutes = currentTime.getMinutes();
 
       currentHours = (currentHours < 10 ? '0' : '') + currentHours;
       currentMinutes = (currentMinutes < 10 ? '0' : '') + currentMinutes;
-
-      var timeOfDay = (currentHours < 12) ? 'AM' : 'PM';
+      timeOfDay = (currentHours < 12) ? 'AM' : 'PM';
 
       if (currentHours > 12) {
         if ((currentHours - 12) < 10) currentHours = '0' + (currentHours - 12);
         else if ((currentHours - 12) >= 10) currentHours = (currentHours - 12);
-      }
-      else currentHours;
-      //currentHours = (currentHours > 12) ? '0' + (currentHours - 12) : currentHours;
-      currentHours = (currentHours === 0) ? 12 : currentHours;
+      } else currentHours;
 
-      var currentTimeString = currentHours + ":" + currentMinutes;
+      currentHours = (currentHours === 0) ? 12 : currentHours;
+      currentTimeString = currentHours + ":" + currentMinutes;
 
       $('#time').html(currentTimeString);
       $('#period').html(timeOfDay);
     },
-    // Set date, month & day
+
+    /** Set date, month & day **/
     update_date: (function() {
-      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-          dates = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          dates = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
       var current_date = new Date().getDate(),
           current_month = new Date().getMonth(),
           current_day  = new Date().getDay();
 
-      $('#day').html(dates[current_day] + ", " + months[current_month] + " " + current_date);
+      $('#day').html(dates[current_day] + ', ' + months[current_month] + ' ' + current_date);
     })(),
-    // Convert temperature unit
+
+    /** Page slider for weather map **/
+    page_slider: (function() {
+      var leftMargin, newLeftMargin;
+      $('.nextBtn').click(function(e) { goRight() });
+      $('.backBtn').click(function(e) { goLeft() });
+
+      // inner section slides left
+      function goRight() {
+        leftMargin = $('.inner-liner').css('margin-left').replace('px', '') * 1;
+        newLeftMargin = (leftMargin - 650);
+        $('.inner-liner').animate({ marginLeft: newLeftMargin }, 500);
+      }
+      // inner section slides right
+      function goLeft() {
+        leftMargin = $('.inner-liner').css('margin-left').replace('px', '') * 1;
+        newLeftMargin = (leftMargin + 650);
+        $('.inner-liner').animate({ marginLeft: newLeftMargin }, 500);
+      }
+    })(),
+
+    /** Convert temperature unit **/
     fToC: function(fahrenheit) {
       var celcius = (fahrenheit - 32) * 5 / 9;
       return celcius.toFixed(1);
