@@ -62,6 +62,7 @@
       } else if (icon === 'clear-night') {
         return 'assets/images/background-images/clear-night.jpg';
       }
+      return 'assets/images/background-images/cloudy.jpg';
     },
 
     /** Set clock showing current time **/
