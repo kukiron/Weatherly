@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weatherly</title>
-    <link rel="icon" href="assets/images/icons/favicon.ico">
-    <link rel="stylesheet" href="style/app.css">
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="inner-liner">
-        <div id="forecast" class="box">
-          <div id="center">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weatherly</title>
+  <link rel="icon" href="assets/images/icons/favicon.ico">
+  <link rel="stylesheet" href="style/app.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="inner-liner">
+      <div id="forecast" class="box">
+        <div id="center">
           <input class="nextBtn" type="image" src="assets/images/radar.png" name="Weather Map">
-            <!-- Address -->
-            <div id="address"></div>
-            <!-- Temperature, Icon & Summary -->
-            <div id="title">
-              <div class="currently">
-                <div class="skycon">
-                  <canvas width="85" height="85"></canvas>
-                </div>
-                <div class="main">
-                  <span id="temp"></span>
-                  <span id="current-summary"></span>
-                </div>
+          <!-- Address -->
+          <div id="address"></div>
+          <!-- Temperature, Icon & Summary -->
+          <div id="title">
+            <div class="currently">
+              <div class="skycon">
+                <canvas width="85" height="85"></canvas>
               </div>
-            </div>
-            <!-- Detail & Forecast -->
-            <div class="secondary">
-              <div id="info_1"></div>
-              <div id="hourly-summary"></div>
-              <div id="info_2">
-              </div>
-            </div>
-            <div>
-            <!-- Time & Date -->
-              <div id="time_date_month">
-                <div id="clock">
-                  <span id="time"></span>
-                  <span id="period"></span>
-                </div>
-                <div id="date_month">
-                  <span id="day"></span>
-                </div>
-              </div>
-              <!-- Unit Conversion -->
-              <div class="choose-unit">
-                <span class="celsius">&degC</span><span> /
-                </span><span class="fahrenheit"> &degF</span>
+              <div class="main">
+                <span id="temp"></span>
+                <span id="current-summary"></span>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Dark Sky weather map on page slide -->
-        <div class="map box">
-          <input class="backBtn" type="image" src="assets/images/back.png">
-          <iframe></iframe>
+          <!-- Weather Detail & Forecast -->
+          <div class="secondary">
+            <div id="info_1"></div>
+            <div id="hourly-summary"></div>
+            <div id="info_2">
+            </div>
+          </div>
+          <div>
+            <!-- Time & Date -->
+            <div id="time_date_month">
+              <div id="clock">
+                <span id="time"></span>
+                <span id="period"></span>
+              </div>
+              <div id="date_month">
+                <span id="day"></span>
+              </div>
+            </div>
+            <!-- Unit Conversion -->
+            <div class="choose-unit">
+              <span class="celsius">&degC</span>
+              <span>/</span>
+              <span class="fahrenheit"> &degF</span>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Dark Sky weather map on page slide -->
+      <div class="map box">
+        <input class="backBtn" type="image" src="assets/images/back.png">
+        <iframe></iframe>
+      </div>
     </div>
-    <!-- Rollbar error Tracking -->
-    <script src="js/rollbar.js" type="text/javascript"></script>
-    <!-- Imports -->
-    <script src="js/lib/jquery.min.js" type="text/javascript"></script>
-    <script src="js/lib/skycons.min.js" type="text/javascript"></script>
-    <script src="js/weatherly.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
-  </body>
+  </div>
+  <!-- Sentry error Tracking -->
+  <script src="js/lib/raven.min.js" type="text/javascript"></script>
+  <script src="js/Raven.js" type="text/javascript"></script>
+  <!-- Imports -->
+  <script src="js/lib/jquery.min.js" type="text/javascript"></script>
+  <script src="js/lib/skycons.min.js" type="text/javascript"></script>
+  <script src="js/weatherly.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+
 </html>
