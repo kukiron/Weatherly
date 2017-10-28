@@ -1,4 +1,4 @@
-/** global: Raven */
+/* global Ravens */
 
 /**
  * Error tracking enabled with Sentry

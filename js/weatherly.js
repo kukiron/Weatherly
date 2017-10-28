@@ -1,4 +1,4 @@
-/** global: Skycons */
+/* global Skycons */
 
 /**
  * Helper functions for Weatherly Extension
@@ -100,8 +100,6 @@
     /** Page slider for weather map **/
     page_slider: (function() {
       var leftMargin, newLeftMargin;
-      $(".nextBtn").click(function() { goRight() });
-      $(".backBtn").click(function() { goLeft() });
 
       // inner section slides left
       function goRight() {
@@ -109,12 +107,16 @@
         newLeftMargin = (leftMargin - 650);
         $(".inner-liner").animate({ marginLeft: newLeftMargin }, 500);
       }
+
       // inner section slides right
       function goLeft() {
         leftMargin = $(".inner-liner").css("margin-left").replace("px", "") * 1;
         newLeftMargin = (leftMargin + 650);
         $(".inner-liner").animate({ marginLeft: newLeftMargin }, 500);
       }
+
+      $(".nextBtn").click(function() { goRight() });
+      $(".backBtn").click(function() { goLeft() });
     })(),
 
     /** Convert temperature unit **/
