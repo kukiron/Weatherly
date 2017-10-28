@@ -1,5 +1,5 @@
 # Weatherly
-[![Build Status](https://scrutinizer-ci.com/g/kukiron/Weatherly/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kukiron/Weatherly/build-status/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/43942f914fa94b8f9962c4f1951507cb)](https://www.codacy.com/app/kukiron/Weatherly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kukiron/Weatherly&amp;utm_campaign=Badge_Grade) [![bitHound Overall Score](https://www.bithound.io/github/kukiron/Weatherly/badges/score.svg)](https://www.bithound.io/github/kukiron/Weatherly)
+[![Build Status](https://scrutinizer-ci.com/g/kukiron/Weatherly/badges/build.png?b=master)](https://scrutinizer-ci.com/g/kukiron/Weatherly/build-status/master) [![bitHound Overall Score](https://www.bithound.io/github/kukiron/Weatherly/badges/score.svg)](https://www.bithound.io/github/kukiron/Weatherly) [![GitHub license](https://img.shields.io/github/license/kukiron/Weatherly.svg)](https://github.com/kukiron/Weatherly)
 
 Browser extension with a beautiful interface to show weather condition at your current location. The browser popup has a Windows 10 lock screen inspired look.
 
