@@ -115,8 +115,8 @@
         $(".inner-liner").animate({ marginLeft: newLeftMargin }, 500);
       }
 
-      $(".nextBtn").click(function() { goRight() });
-      $(".backBtn").click(function() { goLeft() });
+      $(".nextBtn").click(function() { goRight(); });
+      $(".backBtn").click(function() { goLeft(); });
     })(),
 
     /** Convert temperature unit **/
