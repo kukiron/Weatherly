@@ -1,4 +1,5 @@
 # Weatherly
+[![bitHound Overall Score](https://www.bithound.io/github/kukiron/Weatherly/badges/score.svg)](https://www.bithound.io/github/kukiron/Weatherly)
 
 Browser extension with a beautiful interface to show weather condition at your current location. The browser popup has a Windows 10 lock screen inspired look.
 
