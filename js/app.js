@@ -1,3 +1,6 @@
+/** global: Weatherly */
+/** global: Skycons */
+
 /**
  * Main function - Uses DarkSky API for weather details
  *

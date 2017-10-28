@@ -1,3 +1,5 @@
+/** global: Skycons */
+
 /**
  * Helper functions for Weatherly Extension
  *

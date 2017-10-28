@@ -1,3 +1,5 @@
+/** global: Raven */
+
 /**
  * Error tracking enabled with Sentry
  *
