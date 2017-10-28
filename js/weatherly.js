@@ -1,9 +1,9 @@
+/** global: Skycons */
+
 /**
  * Helper functions for Weatherly Extension
  *
  */
-
-/** global: Skycons */
 (function() {
   'use strict';
 
@@ -76,15 +76,12 @@
       timeOfDay = (currentHours < 12) ? 'AM' : 'PM';
 
       if (currentHours > 12) {
-        if ((currentHours - 12) < 10) {
-          currentHours = '0' + (currentHours - 12);
-        } else if ((currentHours - 12) >= 10) {
-          currentHours = (currentHours - 12);
-        }
+        if ((currentHours - 12) < 10) currentHours = '0' + (currentHours - 12);
+        else if ((currentHours - 12) >= 10) currentHours = (currentHours - 12);
       } else currentHours;
 
       currentHours = (currentHours === 0) ? 12 : currentHours;
-      currentTimeString = currentHours + ":" + currentMinutes;
+      currentTimeString = currentHours + ':' + currentMinutes;
 
       $('#time').html(currentTimeString);
       $('#period').html(timeOfDay);
