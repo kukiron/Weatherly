@@ -1,14 +1,13 @@
-/** global: Skycons */
-
 /**
  * Helper functions for Weatherly Extension
  *
  */
+
+/** global: Skycons */
 (function() {
   'use strict';
 
   var Weatherly = {
-
     /** Set icon for weather condition **/
     skycon_type: function(icon) {
       if (icon === 'rain') {
