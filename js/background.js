@@ -4,7 +4,7 @@
  */
 /*
 chrome.browserAction.onClicked.addListener(function() {
-  var url = 'index.html';
+  var url = "index.html";
   var w = 680;
   var h = 520;
   var left = (screen.width/2)-(w/2);
@@ -12,7 +12,7 @@ chrome.browserAction.onClicked.addListener(function() {
 
   chrome.windows.create({
     url: url,
-    type: 'popup',
+    type: "popup",
     width: w,
     height: h,
     left: left,
