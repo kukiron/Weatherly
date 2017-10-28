@@ -28,7 +28,9 @@
 
     $.getJSON(WEATHER_URL + API_KEY + '/' + LAT + ',' + LNG, function(data) {
       // Removing spinner upon data load
-      if (data) $('.wrapper').removeClass('spinner');
+      if (data) {
+        $('.wrapper').removeClass('spinner');
+      }
 
       var temperature = data.currently.temperature,
           current_summary = data.currently.summary,
