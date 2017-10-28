@@ -76,8 +76,11 @@
       timeOfDay = (currentHours < 12) ? 'AM' : 'PM';
 
       if (currentHours > 12) {
-        if ((currentHours - 12) < 10) currentHours = '0' + (currentHours - 12);
-        else if ((currentHours - 12) >= 10) currentHours = (currentHours - 12);
+        if ((currentHours - 12) < 10) {
+          currentHours = '0' + (currentHours - 12);
+        } else if ((currentHours - 12) >= 10) {
+          currentHours = (currentHours - 12);
+        }
       } else currentHours;
 
       currentHours = (currentHours === 0) ? 12 : currentHours;
@@ -102,8 +105,8 @@
     /** Page slider for weather map **/
     page_slider: (function() {
       var leftMargin, newLeftMargin;
-      $('.nextBtn').click(function(e) { goRight() });
-      $('.backBtn').click(function(e) { goLeft() });
+      $('.nextBtn').click(function() { goRight() });
+      $('.backBtn').click(function() { goLeft() });
 
       // inner section slides left
       function goRight() {
