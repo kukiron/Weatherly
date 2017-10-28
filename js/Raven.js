@@ -3,6 +3,6 @@ const sentry_app = '236902';
 const sentry_url = `https://${sentry_key}@sentry.io/${sentry_app}`;
 
 Raven.config(sentry_url, {
-  release: '1.3.0',
+  logger: 'javascript',
   environment: 'production'
 }).install();
