@@ -39,7 +39,7 @@
           dewTemp = data.currently.dewPoint,
           dewTempF = dewTemp.toFixed(1),
           dewTempC = Weatherly.fToC(dewTemp),
-          humidity = data.currently.humidity * 100,
+          humidity = Math.round(data.currently.humidity * 100),
           cloudCover = Math.round(data.currently.cloudCover * 100),
           windSpeed = (data.currently.windSpeed).toFixed(1),
           windBearing = data.currently.windBearing + 45,
